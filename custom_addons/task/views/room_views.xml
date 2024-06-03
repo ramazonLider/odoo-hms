@@ -1,0 +1,37 @@
+<odoo>
+    <data>
+        <record id="view_room_tree" model="ir.ui.view">
+            <field name="name">room.tree</field>
+            <field name="model">room</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="room_count"/>
+                    <field name="room_type"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Form View for Room Model -->
+        <record id="view_room_form" model="ir.ui.view">
+            <field name="name">room.form</field>
+            <field name="model">room</field>
+            <field name="arch" type="xml">
+                <form>
+                    <h1 class="oe_title">Settings</h1>
+                    <sheet>
+                        <notebook>
+                            <page string="Room test">
+                                <group>
+                                    <field name="name"/>
+                                    <field name="room_count"/>
+                                    <field name="room_type"/>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,10 @@
+<odoo>
+    <menuitem name="Hotel management system" id="hotel_management_sys">
+        <menuitem name="Room management" id="room_management_sys" sequence="1">
+            <menuitem name="Room types" id="room_types" sequence="1">
+                <menuitem id="menu_action_task" name="Tasks" action="action_task" sequence="1"/>
+                <menuitem id="menu_action_room" name="Rooms" action="action_room" sequence="2"/>
+            </menuitem>
+        </menuitem>
+    </menuitem>
+</odoo>

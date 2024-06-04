@@ -7,6 +7,7 @@
                 <tree>
                     <field name="name"/>
                     <field name="room_type"/>
+                    <field name="photo" widget="image" class="oe_avatar"/>
                 </tree>
             </field>
         </record>
@@ -24,6 +25,7 @@
                                 <group>
                                     <field name="name"/>
                                     <field name="room_type"/>
+                                    <field name="photo" widget="image"/>
                                 </group>
                             </page>
                         </notebook>

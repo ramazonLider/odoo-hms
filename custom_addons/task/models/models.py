@@ -18,3 +18,9 @@ class Room(models.Model):
     room_count = fields.Integer(string='Room Count')
     room_type = fields.Char(string='Room Type')
 
+class RoomCategory(models.Model):
+    _name = 'category'
+    _description = 'Category'
+
+    name = fields.Char(string='Name')
+    room_type = fields.Char(string='Room Type')

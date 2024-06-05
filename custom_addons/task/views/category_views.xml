@@ -5,6 +5,7 @@
             <field name="model">category</field>
             <field name="arch" type="xml">
                 <tree>
+                    <field name="is_open"/>
                     <field name="name"/>
                     <field name="room_type"/>
                     <field name="photo" widget="image" class="oe_avatar"/>
@@ -23,6 +24,7 @@
                         <notebook>
                             <page string="Room test">
                                 <group>
+                                    <field name="is_open"/>
                                     <field name="name"/>
                                     <field name="room_type"/>
                                     <field name="photo" widget="image"/>

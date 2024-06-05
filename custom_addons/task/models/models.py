@@ -23,6 +23,7 @@ class RoomCategory(models.Model):
     _description = 'Category'
 
     name = fields.Char(string='Name')
+    is_open = fields.Boolean(string='Is Open', default=True)
     photo = fields.Binary(string='Photo')
     short_name = fields.Char(string="Short name")
     room_type = fields.Char(string='Room Type')

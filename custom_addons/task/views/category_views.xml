@@ -7,8 +7,9 @@
                 <tree>
                     <field name="is_open"/>
                     <field name="name"/>
-                    <field name="room_type"/>
-                    <field name="photo" widget="image" class="oe_avatar"/>
+                    <field name="short_name"/>
+                    <field name="main_places"/>
+                    <field name="photo_count"/>
                 </tree>
             </field>
         </record>
@@ -26,8 +27,9 @@
                                 <group>
                                     <field name="is_open"/>
                                     <field name="name"/>
-                                    <field name="room_type"/>
-                                    <field name="photo" widget="image"/>
+                                    <field name="short_name"/>
+                                    <field name="main_places"/>
+                                    <field name="photo_count"/>
                                 </group>
                             </page>
                         </notebook>

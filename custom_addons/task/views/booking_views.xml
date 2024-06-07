@@ -5,11 +5,11 @@
             <field name="model">booking</field>
             <field name="arch" type="xml">
                 <tree>
-                    <field name="user"/>
-                    <field name="name"/>
-                    <field name="surname"/>
-                    <field name="address"/>
-                    <field name="pin_code"/>
+                    <field name="user" />
+                    <field name="name" />
+                    <field name="surname" />
+                    <field name="address" />
+                    <field name="pin_code" />
                 </tree>
             </field>
         </record>
@@ -25,21 +25,27 @@
                         <notebook>
                             <page string="Create your order">
                                 <group>
-                                    <field name="user"/>
-                                    <field name="name"/>
-                                    <field name="surname"/>
-                                    <field name="address"/>
-                                    <field name="pin_code"/>
+                                    <field name="user" />
+                                    <field name="name" />
+                                    <field name="surname" />
+                                    <field name="address" />
+                                    <field name="pin_code" />
                                 </group>
                             </page>
                             <page string="Checking out">
                                 <group>
-                                    <field name="user"/>
-                                    <field name="name"/>
-                                    <field name="surname"/>
-                                    <field name="address"/>
-                                    <field name="pin_code"/>
+                                    <field name="user" />
+                                    <field name="name" />
+                                    <field name="surname" />
+                                    <field name="address" />
+                                    <field name="pin_code" />
                                 </group>
+                                <header>
+                                    <button name="button_action_method"
+                                        string="Click Me"
+                                        type="object"
+                                        class="oe_highlight" />
+                                </header>
                             </page>
                         </notebook>
                     </sheet>

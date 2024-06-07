@@ -1,6 +1,7 @@
-# -*- coding: utf-8 -*-
+from odoo import models, fields, api 
+import logging
+_logger = logging.getLogger(__name__)
 
-from odoo import models, fields, api
 
 
 class Task(models.Model):
@@ -37,3 +38,7 @@ class Booking(models.Model):
     user = fields.Char(string="username")
     pin_code = fields.Integer(string="Your pin code")
     surname = fields.Char(string="Your surname")
+
+    def button_action_method(self):
+        _logger.info("Button clicked!")
+        return True

@@ -27,3 +27,13 @@ class RoomCategory(models.Model):
     is_open = fields.Boolean(string='Is Open', default=True)
     photo_count = fields.Integer(string='Photo')
     short_name = fields.Char(string="Short name")
+
+class Booking(models.Model):
+    _name = "booking"
+    _description = 'Booking'
+
+    name = fields.Char(string="name")
+    address = fields.Char(string="address")
+    user = fields.Char(string="username")
+    pin_code = fields.Integer(string="Your pin code")
+    surname = fields.Char(string="Your surname")

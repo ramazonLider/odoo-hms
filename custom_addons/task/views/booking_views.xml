@@ -1,0 +1,50 @@
+<odoo>
+    <data>
+        <record id="view_booking_tree" model="ir.ui.view">
+            <field name="name">booking.tree</field>
+            <field name="model">booking</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="user"/>
+                    <field name="name"/>
+                    <field name="surname"/>
+                    <field name="address"/>
+                    <field name="pin_code"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Form View for Room Model -->
+        <record id="view_booking_form" model="ir.ui.view">
+            <field name="name">booking.form</field>
+            <field name="model">booking</field>
+            <field name="arch" type="xml">
+                <form>
+                    <h1 class="oe_title">Settings</h1>
+                    <sheet>
+                        <notebook>
+                            <page string="Create your order">
+                                <group>
+                                    <field name="user"/>
+                                    <field name="name"/>
+                                    <field name="surname"/>
+                                    <field name="address"/>
+                                    <field name="pin_code"/>
+                                </group>
+                            </page>
+                            <page string="Checking out">
+                                <group>
+                                    <field name="user"/>
+                                    <field name="name"/>
+                                    <field name="surname"/>
+                                    <field name="address"/>
+                                    <field name="pin_code"/>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

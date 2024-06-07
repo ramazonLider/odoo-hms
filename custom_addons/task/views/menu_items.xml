@@ -5,6 +5,7 @@
                 <menuitem id="menu_action_task" name="Tasks" action="action_task" sequence="1"/>
                 <menuitem id="menu_action_room" name="Rooms" action="action_room" sequence="2"/>
                 <menuitem id="menu_action_category" name="Category" action="action_category" sequence="3"/>
+                <menuitem id="menu_action_booking" name="Booking" action="action_booking" sequence="4"/>
             </menuitem>
         </menuitem>
     </menuitem>

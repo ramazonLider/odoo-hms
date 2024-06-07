@@ -25,6 +25,7 @@ Long description of module's purpose
         'security/ir.model.access.csv',
         'views/actions.xml',
         'views/category_views.xml',
+        'views/booking_views.xml',
         'views/menu_items.xml',
         'views/task_views.xml',
         'views/room_views.xml',

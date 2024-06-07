@@ -2,3 +2,4 @@ id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 task.access_task,access_task,model_task,base.group_user,1,1,1,1
 task.access_room,access_room,model_room,base.group_user,1,1,1,1
 task.access_category,access_category,model_category,base.group_user,1,1,1,1
+task.access_booking,access_booking,task.model_booking,base.group_user,1,1,1,1

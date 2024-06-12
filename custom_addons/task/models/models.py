@@ -32,16 +32,30 @@ class RoomCategory(models.Model):
 class Booking(models.Model):
     _name = "booking"
     _description = 'Booking'
+    
+    name = fields.Char(string='Name')
+    user_id = fields.Many2one('res.users', string='User')
+    cart_id = fields.Many2one('cart', string='Cart')
+    total_amount = fields.Float(string='Total Amount')
+    payment_status = fields.Selection([
+        ('pending', 'Pending'),
+        ('paid', 'Paid'),
+        ('cancelled', 'Cancelled')
+    ], string='Payment Status', default='pending')
 
-    name = fields.Char(string="name")
-    address = fields.Char(string="address")
-    user = fields.Char(string="username")
-    pin_code = fields.Integer(string="Your pin code")
-    surname = fields.Char(string="Your surname")
+    @api.model
+    def create(self, vals):
+        _logger.info('Booking created: %s', vals)
+        return super(Booking, self).create(vals)
 
-    def button_action_method(self):
-        _logger.info("Button clicked!")
-        return True
+    def confirm_payment(self):
+        self.payment_status = 'paid'
+        _logger.info('Payment confirmed for Booking: %s', self.name)
+
+    def cancel_payment(self):
+        self.payment_status = 'cancelled'
+        _logger.info('Payment cancelled for Booking: %s', self.name)
+
 
 class Cart(models.Model):
     _name = 'cart'

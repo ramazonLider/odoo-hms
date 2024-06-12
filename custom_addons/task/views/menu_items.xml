@@ -6,6 +6,7 @@
                 <menuitem id="menu_action_room" name="Rooms" action="action_room" sequence="2"/>
                 <menuitem id="menu_action_category" name="Category" action="action_category" sequence="3"/>
                 <menuitem id="menu_action_booking" name="Booking" action="action_booking" sequence="4"/>
+                <menuitem id="menu_action_cart" name="Cart" action="action_cart" sequence="5"/>
             </menuitem>
         </menuitem>
     </menuitem>

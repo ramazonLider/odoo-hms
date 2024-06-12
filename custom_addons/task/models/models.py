@@ -42,3 +42,26 @@ class Booking(models.Model):
     def button_action_method(self):
         _logger.info("Button clicked!")
         return True
+
+class Cart(models.Model):
+    _name = 'cart'
+    _description = 'Cart'
+
+    name = fields.Char(string='Name')
+    user_id = fields.Many2one('res.users', string='User')
+    room_ids = fields.Many2many('room', string='Rooms')
+
+    @api.model
+    def create(self, vals):
+        _logger.info('Cart created: %s', vals)
+        return super(Cart, self).create(vals)
+
+    def add_room(self, room_id):
+        room = self.env['room'].browse(room_id)
+        self.room_ids = [(4, room.id)]
+        _logger.info('Room added to cart: %s', room.name)
+
+    def remove_room(self, room_id):
+        room = self.env['room'].browse(room_id)
+        self.room_ids = [(3, room.id)]
+        _logger.info('Room removed from cart: %s', room.name)

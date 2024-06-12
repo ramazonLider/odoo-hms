@@ -44,4 +44,15 @@
         </field>
     </record>
 
+    <record model="ir.actions.act_window" id="action_cart">
+        <field name="name">Cart name</field>
+        <field name="res_model">cart</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Choose your room
+            </p>
+        </field>
+    </record>
+
 </odoo>
